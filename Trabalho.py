@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize	import fsolve
 
-
 #Definindo uma função
 
 def funcao(x):
@@ -15,21 +14,17 @@ def bisseccao(a, b, e):
 
     if funcao(a)*funcao(b) < 0:
         while (math.fabs(b-a)/2 > e):
-            xl = (a+b)/2
-            print(xl)
-            print("teste: ", xl)
-            if funcao(xl) == 0:
-                print("Raiz é: " ,xl)                             
+            xl = (a+b)/2      
+
+            if funcao(xl) == 0:                                         
                 break
             else:
                 if funcao(a)*funcao(xl) < 0:
                     b = xl
-                    print(b)
-                    print("B: ", b)
+                    
                 else:
                     a = xl
-                    print(a)
-                    print("A: ", a)
+                    
         print("Valor da raiz é: ", xl)
 
     else:
