@@ -12,20 +12,21 @@ def funcao(x):
 #Definição do intervalo [a,b] e um erro 
 
 def bisseccao(a, b, e):
+
     if funcao(a)*funcao(b) < 0:
         while (math.fabs(b-a)/2 > e):
             xl = (a+b)/2
-            print(xl)
+            print("teste: ", xl)
             if funcao(xl) == 0:
-                print("Raiz é: " ,xl)
+                print("Raiz é: " ,xl)                
                 break
             else:
                 if funcao(a)*funcao(xl) < 0:
                     b = xl
-                    print(b)
+                    print("B: ", b)
                 else:
                     a = xl
-                    print(a)
+                    print("A: ", a)
         print("Valor da raiz é: ", xl)
 
     else:
